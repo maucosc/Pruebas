@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConversionMoneda">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:text="Regresar"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conversor de moneda"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:inputType="numberDecimal"
+            android:gravity="center"
+            android:hint="Ingrese una cantida de dinero" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            tools:ignore="MissingConstraints">
+
+            <RadioGroup
+                android:id="@+id/rgMonedaOrigen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="moneda de origen" />
+
+                <RadioButton
+                    android:id="@+id/rdPesoChile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Peso Chileno" />
+
+                <RadioButton
+                    android:id="@+id/rdDolar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dolar" />
+
+                <RadioButton
+                    android:id="@+id/rdPesoArgentino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Peso Argentino" />
+
+                <RadioButton
+                    android:id="@+id/rdEuro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Euro" />
+
+                <RadioButton
+                    android:id="@+id/rdYen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yen" />
+
+                <RadioButton
+                    android:id="@+id/rdSoles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Soles" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="moneda de destino" />
+
+                <Button
+                    android:id="@+id/btnPesoChile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Peso Chileno"
+                    android:background="@color/black"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnDolar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dolar"
+                    android:background="@color/black"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnPesoArgentino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Peso Argentino"
+                    android:background="@color/black"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnEuro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Euro"
+                    android:background="@color/black"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnYen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Yen"
+                    android:background="@color/black"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnSoles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Soles"
+                    android:background="@color/black"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Moneda: "
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
